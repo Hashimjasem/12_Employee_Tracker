@@ -1,0 +1,23 @@
+{
+  "name": "employee-tracker_mysql",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Hashimjasem/Employee-Tracker_mySQL.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Hashimjasem/Employee-Tracker_mySQL/issues"
+  },
+  "homepage": "https://github.com/Hashimjasem/Employee-Tracker_mySQL#readme",
+  "dependencies": {
+    "inquirer": "^9.1.4",
+    "mysql2": "^2.3.3"
+  }
+}
