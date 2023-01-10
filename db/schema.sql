@@ -1,4 +1,4 @@
-DROP DATABASE IF EXISTS employeee_cms_hw;
+DROP DATABASE IF EXISTS `employeee_cms_hw`;
 CREATE SCHEMA `employeee_cms_hw` ;
 
 CREATE TABLE `employeee_cms_hw`.`departments` (

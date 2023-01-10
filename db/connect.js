@@ -1,15 +1,14 @@
-const mysql = require('mysql2');
-const { async } = require('rxjs');
+const mysql = require('mysql2/promise');
 
-async function connect (){
-    const connection = await mysql.createConnection({
+async function connect() {
+    return mysql.createConnection({
         host: 'localhost',
         user: 'root',
         password: 'BahaAsraa1305',
-        database:'emloyee_cms_hw'
+        database: 'emloyeee_cms_hw'
     })
 
-return connection.connect()
+    return connection.connect()
 }
 module.exports = {
     connect
