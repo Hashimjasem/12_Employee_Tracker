@@ -1,4 +1,5 @@
 const {default: inquirer} = require('inquirer');
+const { viewDepartments, createDepartments } = require('./operations/depatments');
 
 
 function askQuestion(){
@@ -10,9 +11,31 @@ inquirer.prompt([
         choices: [
             'view all departments',
             'create a department',
+            'view all roles',
+            'view all emloyees',
+            'add a role',
+            'add a employee',
+            'update an employee role',
+            'end task',
         ]
+    },
+    {
+        message: 'what is the department name?',
+        name: 'department_name',
+        type: 'input',
+        when: function(ans){
+            return ans.operation === 'create a department';
+        }
     }
-]).then((res) => {
+]).then(async(res) => {
+    if(res.operation === 'view all departments'){
+        await viewDepartments()
+    }else if(res.operation === 'create a department'){
+        await createDepartments(res.department_name)
+    }else if (res.operation === 'end task'){
+        console.log('done');
+        process.exit(0);
+    }
     
 })
 };
