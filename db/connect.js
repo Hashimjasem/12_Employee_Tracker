@@ -5,10 +5,8 @@ async function connect() {
         host: 'localhost',
         user: 'root',
         password: 'BahaAsraa1305',
-        database: 'emloyeee_cms_hw'
-    })
-
-    return connection.connect()
+        database: 'employeee_cms_hw'
+    });
 }
 module.exports = {
     connect
