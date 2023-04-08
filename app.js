@@ -27,22 +27,22 @@ function askQuestion() {
                 return ans.operation === 'add a department';
             }
         },
-        // {
-        //     message: 'what is the role name?',
-        //     name: 'role_name',
-        //     type: 'input',
-        //     when: function (ans) {
-        //         return ans.operation === 'add a role';
-        //     }
-        // },
-        // {
-        //     message: 'what is the employees first name?',
-        //     name: 'employee_name',
-        //     type: 'input',
-        //     when: function (ans) {
-        //         return ans.operation === 'add a employee';
-        //     }
-        // },
+        {
+            message: 'what is the role name?',
+            name: 'role_name',
+            type: 'input',
+            when: function (ans) {
+                return ans.operation === 'add a role';
+            }
+        },
+        {
+            message: 'what is the employees first name?',
+            name: 'employee_name',
+            type: 'input',
+            when: function (ans) {
+                return ans.operation === 'add a employee';
+            }
+        },
 
 
 
@@ -55,13 +55,14 @@ function askQuestion() {
             const departments = await getDepartment();
             console.table(departments)
 //roles//
-        // } else if (res.operation === 'view all roles') {
-        //     const roles = await getRole();
-        //     console.table(role)
+        } else if (res.operation === 'view all roles') {
+            const roles = await getRole();
+            console.table(role)
 //employee//
-        // } else if (res.operation === 'view all employees') {
-        //     const employees = await getEmployee();
-        //     console.table(employee)
+        } else if (res.operation === 'view all employees') {
+            const employees = await getEmployee();
+            console.table(employee)
+
 
 
 //add//
@@ -71,10 +72,10 @@ function askQuestion() {
             await createDepartment(res.department_name)
 //employee//
         } else if (res.operation === 'add a employee') {
-            await createEmployee(res.department_name)
+            await createEmployee(res.empployee_name)
 //role/
         } else if (res.operation === 'add a role') {
-            await createRole(res.department_name)
+            await createRole(res.role_name)
 
 
 //update employee role//
