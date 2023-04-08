@@ -1,5 +1,7 @@
 const inquirer = require("inquirer");
 const { getDepartment, createDepartment } = require("./operations/department");
+const {getEmployee, createEmployee} = require('./operations/employee')
+const {getRole, createRole} = require('./operations/role')
 
 
 function askQuestion() {
